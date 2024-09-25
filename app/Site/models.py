@@ -9,10 +9,14 @@ class DataProductBanner(models.Model):
     des2 = models.TextField()
 
 
-class BlogData(models.Model):
-    name = models.CharField(max_length=100)
-    content = models.TextField()
-    image = models.ImageField(upload_to="images/blog")
+class ProductTop(models.Model):
+    image = models.ImageField(upload_to="images/top")
+    descount = models.IntegerField()
+    price = models.IntegerField(default=0)
+    title = models.CharField(max_length=100)
+    listDes1 = models.CharField(max_length=100)
+    listDes2 = models.CharField(max_length=100)
+    time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.title

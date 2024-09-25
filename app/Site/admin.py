@@ -8,6 +8,3 @@ class DataProductBannerAdmin(admin.ModelAdmin):
     list_display = ('name', 'des')
 
 
-@admin.register(models.BlogData)
-class BlogDataAdmin(admin.ModelAdmin):
-    list_display = ('name',)
