@@ -6,6 +6,8 @@ from . import models
 def home(request):
     banners = models.DataProductBanner.objects.all()[:4]
 
-    context = {'banners': banners}
+    topten = models.ProductTop.objects.all()
+
+    context = {'banners': banners, 'topten': topten}
 
     return render(request, 'index.html', context)

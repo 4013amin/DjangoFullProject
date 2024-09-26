@@ -8,3 +8,6 @@ class DataProductBannerAdmin(admin.ModelAdmin):
     list_display = ('name', 'des')
 
 
+@admin.register(models.ProductTop)
+class ProductTop(admin.ModelAdmin):
+    list_display = ['title', 'listDes1']
